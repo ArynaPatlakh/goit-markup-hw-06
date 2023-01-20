@@ -225,6 +225,52 @@ a {
   line-height: 1.5;
   letter-spacing: 0.02em;
 }
+
+.footer-div3 {
+  margin-left: 80px;
+}
+
+.footer-title-form {
+  margin-bottom: 16px;
+
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #ffffff;
+}
+
+.input-footer {
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  background-color: transparent;
+
+  width: 264px;
+  height: 40px;
+
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 2;
+  letter-spacing: 0.04em;
+
+  color: rgba(255, 255, 255, 0.6);
+
+  padding-left: 16px;
+}
+
+.footr-form-btn {
+  width: 165px;
+  height: 40px;
+  padding: 0;
+
+  background: #4d5ae5;
+  border-radius: 4px;
+  border: 1px solid transparent;
+
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #ffffff;
+}
 /* ---------------------FOOTER-ICON----------------- */
 
 .footer-div {
@@ -312,6 +358,10 @@ a {
   border-radius: 50%;
 
   border: 1px solid rgba(0, 0, 0, 0.1);
+
+  transition-property: background-colore fill border-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-close:hover,
@@ -344,6 +394,16 @@ a {
   text-align: center;
 }
 
+.modal-list {
+  margin-top: 16px;
+  width: 360px;
+}
+
+.modal-item {
+  margin-bottom: 8px;
+  text-align: left;
+}
+
 .modal-option {
   display: block;
   width: 100%;
@@ -353,20 +413,19 @@ a {
 
   background-color: transparent;
   padding: 0;
+
+  transition-property: border-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-option:hover,
+.modal-option:focus {
+  border-color: var(--accent-color);
 }
 
 .modal-input {
   height: 40px;
-}
-
-.modal-list {
-  margin-top: 16px;
-  width: 360px;
-}
-
-.modal-item {
-  margin-bottom: 8px;
-  text-align: left;
 }
 
 .title-option {
@@ -408,6 +467,15 @@ a {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   border: 1px solid transparent;
+
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-btn:hover,
+.modal.btn:focus {
+  background-color: var(--accent-hover-color);
 }
 /* PRIMARY PAGE */
 
