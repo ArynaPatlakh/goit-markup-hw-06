@@ -404,7 +404,12 @@
               placeholder="E-mail"
               class="input-footer"
             />
-            <button type="submit" class="footr-form-btn">Subscribe</button>
+            <button type="submit" class="footer-form-btn">
+              Subscribe
+              <svg class="footer-icon-send" width="24" height="24">
+                <use href="./images/icon/sprite.svg#icon-send"></use>
+              </svg>
+            </button>
           </form>
         </div>
       </div>
@@ -425,30 +430,47 @@
           <ul class="modal-list">
             <li class="modal-item">
               <label for="name" class="title-option">Name</label>
-              <input
-                name="name"
-                type="text"
-                id="name"
-                class="modal-option modal-input"
-              />
+              <div class="modal-item-icon">
+                <input
+                  name="name"
+                  type="text"
+                  id="name"
+                  class="modal-option modal-input"
+                />
+                <svg class="modal-icon" width="18" height="24">
+                  <use href="./images/icon/sprite.svg#icon-person"></use>
+                </svg>
+              </div>
             </li>
+
             <li class="modal-item">
               <label for="phone" class="title-option">Phone</label>
-              <input
-                type="tel"
-                name="phone"
-                id="phone"
-                class="modal-option modal-input"
-              />
+              <div class="modal-item-icon">
+                <input
+                  type="tel"
+                  name="phone"
+                  id="phone"
+                  class="modal-option modal-input"
+                />
+                <svg class="modal-icon" width="18" height="24">
+                  <use href="./images/icon/sprite.svg#icon-phone"></use>
+                </svg>
+              </div>
             </li>
+
             <li class="modal-item">
               <label for="email" class="title-option">Email</label>
-              <input
-                type="email"
-                name="email"
-                id="email"
-                class="modal-option modal-input"
-              />
+              <div class="modal-item-icon">
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  class="modal-option modal-input"
+                />
+                <svg class="modal-icon" width="18" height="24">
+                  <use href="./images/icon/sprite.svg#icon-email"></use>
+                </svg>
+              </div>
             </li>
 
             <li class="modal-item">
@@ -461,6 +483,22 @@
               ></textarea>
             </li>
           </ul>
+
+          <div class="checkbox-div">
+            <label class="checkbox-text">
+              <input
+                type="checkbox"
+                class="visually-hidden modal-checkbox"
+                value="agree"
+              />
+              <span class="checked-icon">
+                <svg class="icon-agree" width="16" height="16">
+                  <use href="./images/icon/sprite.svg#icon-agree"></use>
+                </svg> </span
+              >I accept the terms and conditions of the
+              <a href=""> Privacy Policy</a>
+            </label>
+          </div>
 
           <button type="submit" class="modal-btn">Send</button>
         </form>

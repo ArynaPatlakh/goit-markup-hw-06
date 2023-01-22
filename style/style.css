@@ -227,7 +227,7 @@ a {
 }
 
 .footer-div3 {
-  margin-left: 80px;
+  margin-left: auto;
 }
 
 .footer-title-form {
@@ -243,6 +243,7 @@ a {
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 4px;
   background-color: transparent;
+  outline: none;
 
   width: 264px;
   height: 40px;
@@ -257,20 +258,45 @@ a {
   padding-left: 16px;
 }
 
-.footr-form-btn {
+.footer-form-btn {
+  position: relative;
+
   width: 165px;
   height: 40px;
   padding: 0;
+  cursor: pointer;
 
   background: #4d5ae5;
   border-radius: 4px;
   border: 1px solid transparent;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.04em;
+
   color: #ffffff;
+
+  margin-left: 24px;
+  padding-left: 24px;
+  text-align: start;
+
+  transition-property: background-color;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 250ms;
 }
+
+.footer-form-btn:hover,
+.footer-form-btn:focus {
+  background-color: var(--accent-hover-color);
+}
+
+.footer-icon-send {
+  position: absolute;
+  bottom: 8px;
+  right: 24px;
+}
+
 /* ---------------------FOOTER-ICON----------------- */
 
 .footer-div {
@@ -383,15 +409,13 @@ a {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
-
   letter-spacing: 0.02em;
 
   color: #2e2f42;
 }
 
 .modal-form {
-  margin-left: 24px;
-  text-align: center;
+  padding-left: 24px;
 }
 
 .modal-list {
@@ -400,7 +424,6 @@ a {
 }
 
 .modal-item {
-  margin-bottom: 8px;
   text-align: left;
 }
 
@@ -414,6 +437,8 @@ a {
   background-color: transparent;
   padding: 0;
 
+  font-size: 12px;
+
   transition-property: border-color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -426,6 +451,10 @@ a {
 
 .modal-input {
   height: 40px;
+  outline: none;
+  padding-left: 38px;
+
+  margin-bottom: 8px;
 }
 
 .title-option {
@@ -437,21 +466,31 @@ a {
 }
 
 .modal-textarea {
+  /* font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.04em;
+  color: rgba(117, 117, 117, 0.5); */
+
+  height: 120px;
+  resize: none;
+  outline: none;
+
+  font-size: 12px;
+  padding-top: 8px;
+  padding-left: 16px;
+}
+
+.modal-textarea::placeholder {
   font-size: 12px;
   line-height: 1.33;
   letter-spacing: 0.04em;
   color: rgba(117, 117, 117, 0.5);
-
-  height: 120px;
-  resize: none;
-
-  /* padding-left: 16px;
-  padding-top: 8px; */
 }
 
 .modal-btn {
   cursor: pointer;
-  margin-left: auto;
+  margin: 0 auto;
+  display: block;
 
   font-family: Roboto, sans-serif;
   font-weight: 500;
@@ -467,6 +506,7 @@ a {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   border: 1px solid transparent;
+  outline: none;
 
   transition-property: background-color;
   transition-duration: 250ms;
@@ -474,9 +514,100 @@ a {
 }
 
 .modal-btn:hover,
-.modal.btn:focus {
+.modal-btn:focus {
   background-color: var(--accent-hover-color);
 }
+
+/* ------------MODAL IKON------------ */
+
+.modal-item-icon {
+  position: relative;
+}
+
+.modal-icon {
+  position: absolute;
+  top: 8px;
+  left: 16px;
+
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  fill: var(--title-text-color);
+}
+
+.modal-input:hover + .modal-icon,
+.modal-input:focus + .modal-icon {
+  fill: var(--accent-hover-color);
+}
+
+/* .checkbox-text::before {
+  content: "";
+  display: block;
+  width: 16px;
+  height: 16px;
+  border: 1.25px solid #2E2F42;
+  border-radius: 2px;
+} */
+
+/* .checked-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 16px;
+  height: 16px;
+  border: 1.25px solid #2e2f42;
+  border-radius: 2px;
+
+  fill: transparent;
+}
+
+.modal-checkbox:checked + .checkbax-text + span {
+  fill: var(--exception-color);
+  background-color: var(--accent-color);
+  border: none;
+} */
+
+.checkbox-div {
+  margin-top: 16px;
+  margin-bottom: 24px;
+}
+
+.checkbox-text {
+  display: flex;
+
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.04em;
+
+  color: #757575;
+}
+
+.checked-icon {
+  width: 16px;
+  height: 16px;
+  border: 2px solid #000000;
+  border-radius: 3px;
+
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+
+  margin-right: 8px;
+
+  fill: transparent;
+}
+
+.icon-agree {
+  margin-top: 1px;
+}
+
+.modal-checkbox:checked + .checked-icon {
+  background-color: var(--accent-color);
+  border: none;
+  fill: #f4f4fd;
+}
+
 /* PRIMARY PAGE */
 
 /* ---------------------Hero---------------------- */
