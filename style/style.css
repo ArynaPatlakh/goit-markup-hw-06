@@ -265,6 +265,7 @@ a {
   height: 40px;
   padding: 0;
   cursor: pointer;
+  font-weight: 500;
 
   background: #4d5ae5;
   border-radius: 4px;
@@ -351,6 +352,7 @@ a {
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transform: translate(-50%, -50%) scaleY(1);
   transform-origin: top;
+  padding: 72px 24px 24px 24px;
 
   top: 50%;
   left: 50%;
@@ -404,7 +406,8 @@ a {
 }
 
 .modal-title {
-  padding-top: 72px;
+  margin-bottom: 16px;
+
   text-align: center;
   font-weight: 500;
   font-size: 16px;
@@ -414,17 +417,9 @@ a {
   color: #2e2f42;
 }
 
-.modal-form {
-  padding-left: 24px;
-}
-
-.modal-list {
-  margin-top: 16px;
-  width: 360px;
-}
-
 .modal-item {
   text-align: left;
+  margin-bottom: 8px;
 }
 
 .modal-option {
@@ -453,12 +448,9 @@ a {
   height: 40px;
   outline: none;
   padding-left: 38px;
-
-  margin-bottom: 8px;
 }
 
 .title-option {
-  margin-bottom: 4px;
   font-size: 12px;
   line-height: 1.33;
   letter-spacing: 0.04em;
@@ -518,10 +510,15 @@ a {
   background-color: var(--accent-hover-color);
 }
 
+.checked-link {
+  color: var(--accent-color);
+  text-decoration-line: underline;
+}
 /* ------------MODAL IKON------------ */
 
 .modal-item-icon {
   position: relative;
+  margin-top: 4px;
 }
 
 .modal-icon {
